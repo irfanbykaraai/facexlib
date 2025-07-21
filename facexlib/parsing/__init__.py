@@ -15,7 +15,7 @@ def init_parsing_model(model_name='bisenet', half=False, device='cuda', model_ro
     else:
         raise NotImplementedError(f'{model_name} is not implemented.')
 
-    model_path = model_rootpath + "parsing_parsenet.pth"
+    model_path = model_rootpath + "/parsing_parsenet/parsing_parsenet.pth"
     load_net = torch.load(model_path, map_location=lambda storage, loc: storage)
     model.load_state_dict(load_net, strict=True)
     model.eval()
