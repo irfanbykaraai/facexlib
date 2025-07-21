@@ -15,7 +15,7 @@ def init_detection_model(model_name, half=False, device='cuda', model_rootpath=N
     else:
         raise NotImplementedError(f'{model_name} is not implemented.')
 
-    model_path = model_rootpath + "detection_Resnet50_Final.pth"
+    model_path = model_rootpath + "face_detector_resnet/detection_Resnet50_Final.pth"
 
     # TODO: clean pretrained model
     load_net = torch.load(model_path, map_location=lambda storage, loc: storage)
